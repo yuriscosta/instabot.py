@@ -10,4 +10,5 @@ from get_accounts import list_accounts
 from bot import InitBot
 
 for account in list_accounts():
-    InitBot(account['user'], account['password'])
+    thread = InitBot(account['user'], account['password'])
+    thread.start()

@@ -7,7 +7,7 @@ import itertools
 import json
 import logging
 import random
-import signal
+#import signal
 import sys
 
 if 'threading' in sys.modules:
@@ -202,7 +202,7 @@ class InstaBot:
         self.write_log(log_string)
         self.login()
         self.populate_user_blacklist()
-        signal.signal(signal.SIGTERM, self.cleanup)
+        #signal.signal(signal.SIGTERM, self.cleanup)
         atexit.register(self.cleanup)
 
     def populate_user_blacklist(self):
